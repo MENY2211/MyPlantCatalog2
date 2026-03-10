@@ -1,0 +1,4 @@
+# Normalización de texto
+* text=auto
+*.bat text= eol=crlf
+gradlew text eol=lf
