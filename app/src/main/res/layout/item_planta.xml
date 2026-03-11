@@ -1,71 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="12dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="2dp"
-    app:cardBackgroundColor="@color/blanco">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:padding="12dp">
 
         <ImageView
-            android:id="@+id/img_planta"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:id="@+id/imgPlanta"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:scaleType="centerCrop"
-            android:contentDescription="Foto de la planta" />
+            android:layout_marginEnd="12dp" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_nombre_comun"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/verde_dark"
-                android:layout_marginBottom="2dp" />
-
-            <TextView
-                android:id="@+id/tv_nombre_cientifico"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textStyle="italic"
-                android:textColor="@color/texto_suave"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:id="@+id/tv_usos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="@color/texto_suave"
-                android:maxLines="2"
-                android:ellipsize="end" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_ver"
+                android:id="@+id/tvNombreComun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1B5E20" />
+
+            <TextView
+                android:id="@+id/tvNombreCientifico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#555"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvUsos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#333"
+                android:layout_marginTop="4dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Ver detalle"
-                app:chipBackgroundColor="@color/verde_light"
-                app:chipStrokeColor="@color/verde_primary"
-                app:chipStrokeWidth="1dp"
-                android:textColor="@color/verde_primary" />
+                android:layout_marginTop="6dp" />
 
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnFavorito"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/btn_star_big_off"
+            android:contentDescription="Favorito"
+            android:layout_gravity="center_vertical" />
+
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+
+</androidx.cardview.widget.CardView>

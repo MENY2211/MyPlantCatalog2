@@ -10,6 +10,26 @@
         android:label="Inicio" />
 
     <fragment
+        android:id="@+id/explorarFragment"
+        android:name="com.example.equipo0.ui.ExplorarFragment"
+        android:label="Explorar" />
+
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.example.equipo0.ui.FavoritosFragment"
+        android:label="Favoritos" />
+
+    <fragment
+        android:id="@+id/misPlantasFragment"
+        android:name="com.example.equipo0.ui.MisPlantasFragment"
+        android:label="Mis Plantas" />
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.equipo0.ui.PerfilFragment"
+        android:label="Perfil" />
+
+    <fragment
         android:id="@+id/catalogoFragment"
         android:name="com.example.equipo0.ui.CatalogoFragment"
         android:label="Catálogo">
