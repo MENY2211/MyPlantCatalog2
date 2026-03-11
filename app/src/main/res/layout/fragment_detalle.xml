@@ -10,6 +10,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btn_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Regresar"
+            android:textColor="@color/blanco"
+            android:backgroundTint="@color/verde_primary"
+            android:layout_margin="16dp"
+            style="@style/Widget.Material3.Button" />
+
         <ImageView
             android:id="@+id/img_detalle"
             android:layout_width="match_parent"

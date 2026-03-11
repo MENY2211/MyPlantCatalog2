@@ -39,6 +39,9 @@ class DetalleFragment : Fragment() {
                 crossfade(true)
                 placeholder(android.R.drawable.ic_menu_gallery)
             }
+            btnRegresar.setOnClickListener {
+                requireActivity().onBackPressedDispatcher.onBackPressed()
+            }
         }
     }
 
