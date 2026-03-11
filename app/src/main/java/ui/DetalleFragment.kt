@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import coil.load
 import com.example.equipo0.databinding.FragmentDetalleBinding
 import com.example.equipo0.model.PlantasData
 
@@ -35,10 +34,7 @@ class DetalleFragment : Fragment() {
             tvDetalleUsos.text = planta.usos
             tvDetallePreparacion.text = planta.preparacion
             tvDetalleContra.text = planta.contraindicaciones
-            imgDetalle.load(planta.imageUrl) {
-                crossfade(true)
-                placeholder(android.R.drawable.ic_menu_gallery)
-            }
+            imgDetalle.setImageResource(planta.imageRes)  // ← cambio aquí
             btnRegresar.setOnClickListener {
                 requireActivity().onBackPressedDispatcher.onBackPressed()
             }
