@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Fondos -->
-    <color name="fondo_crema">#FDF6E3</color>
-    <color name="fondo_crema_oscuro">#F5ECD7</color>
+    <color name="fondo_crema">#F5F0E8</color>
+    <color name="fondo_crema_oscuro">#EDE8DB</color>
 
-    <!-- Tarjetas verde oscuro -->
-    <color name="tarjeta_verde">#1E3A2F</color>
-    <color name="tarjeta_verde_claro">#2D5A45</color>
+    <!-- Tarjetas -->
+    <color name="tarjeta_verde">#FAFAF5</color>
 
-    <!-- Textos sobre tarjeta oscura -->
-    <color name="texto_nombre">#A8D5B5</color>
-    <color name="texto_cientifico">#7DB89A</color>
-    <color name="texto_usos">#C8E6C9</color>
+    <!-- Textos -->
+    <color name="texto_nombre">#1B4332</color>
+    <color name="texto_cientifico">#6B7280</color>
+    <color name="texto_usos">#374151</color>
 
     <!-- Acentos -->
     <color name="verde_primario">#2E7D32</color>
     <color name="verde_oscuro">#1B5E20</color>
-    <color name="dorado_favorito">#FFB300</color>
+    <color name="dorado">#C8A84B</color>
 
     <!-- BottomNav -->
     <color name="nav_seleccionado">#2E7D32</color>
     <color name="nav_no_seleccionado">#9E9E9E</color>
 
     <!-- Chip -->
-    <color name="chip_fondo">#A5D6A7</color>
-    <color name="chip_texto">#1B5E20</color>
+    <color name="chip_fondo">#A8D5B5</color>
+    <color name="chip_texto">#1B4332</color>
 </resources>
