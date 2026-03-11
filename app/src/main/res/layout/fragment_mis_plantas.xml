@@ -1,49 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_crema">
+    android:background="@color/md_surface">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="16dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mis Plantas"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/verde_oscuro"
-            android:paddingStart="16dp"
-            android:layout_marginBottom="10dp"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mis Notas"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_on_surface"/>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Buscar"/>
+
+        </LinearLayout>
+
+        <!-- Lista de notas -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerMisPlantas"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:clipToPadding="false"
+            android:paddingTop="8dp"
             android:paddingBottom="80dp"/>
 
-        <TextView
+        <!-- Estado vacío -->
+        <LinearLayout
             android:id="@+id/tvMisPlantasVacio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🌱 Aún no tienes notas.\nToca el botón + para agregar una nota personal sobre cualquier planta."
-            android:textColor="#9E9E9E"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
             android:gravity="center"
             android:visibility="gone"
-            android:layout_marginTop="64dp"
-            android:textSize="15sp"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"/>
+            android:padding="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌱"
+                android:textSize="52sp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aún no tienes notas"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_on_surface"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toca el botón + para agregar tu primera nota herbolaria."
+                android:textColor="@color/md_on_surface_variant"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.4"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
+    <!-- FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregarNota"
         android:layout_width="wrap_content"
@@ -52,7 +99,7 @@
         android:layout_margin="20dp"
         android:contentDescription="Agregar nota"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/verde_primario"
-        app:tint="@android:color/white"/>
+        app:backgroundTint="@color/md_primary"
+        app:tint="@color/md_on_primary"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

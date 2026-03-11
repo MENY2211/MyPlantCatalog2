@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- HEADER MD3 con esquinas redondeadas abajo -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,6 @@
                 android:textColor="#CCE8CC"
                 android:layout_marginBottom="24dp"/>
 
-            <!-- Stats row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,14 +52,12 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="0dp"
                     app:cardBackgroundColor="#33FFFFFF">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center"
                         android:padding="16dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -68,14 +65,12 @@
                             android:textSize="28sp"
                             android:textStyle="bold"
                             android:textColor="@color/md_on_primary"/>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Plantas"
                             android:textSize="12sp"
                             android:textColor="#CCE8CC"/>
-
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -87,14 +82,12 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="0dp"
                     app:cardBackgroundColor="#33FFFFFF">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center"
                         android:padding="16dp">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -102,14 +95,12 @@
                             android:textSize="28sp"
                             android:textStyle="bold"
                             android:textColor="@color/md_on_primary"/>
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Tabasco"
                             android:textSize="12sp"
                             android:textColor="#CCE8CC"/>
-
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -123,7 +114,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- Sección: Plantas destacadas -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +123,7 @@
                 android:textColor="@color/md_primary"
                 android:layout_marginBottom="12dp"/>
 
-            <!-- Grid 2x2 -->
+            <!-- FILA 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -142,7 +132,7 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
@@ -153,28 +143,29 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="12dp">
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/planta_hierba_santa"/>
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🌿"
-                            android:textSize="28sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Hierba Santa"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/md_on_surface"
-                            android:gravity="center"/>
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:background="@color/md_surface"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
@@ -185,27 +176,29 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="12dp">
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/planta_chaya"/>
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🥬"
-                            android:textSize="28sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Chaya"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/md_on_surface"
-                            android:gravity="center"/>
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:background="@color/md_surface"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
+            <!-- FILA 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -214,7 +207,7 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="16dp"
@@ -225,28 +218,29 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="12dp">
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/planta_albahaca_morada"/>
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🌸"
-                            android:textSize="28sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Albahaca Morada"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/md_on_surface"
-                            android:gravity="center"/>
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:background="@color/md_surface"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="100dp"
+                    android:layout_height="120dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="16dp"
@@ -257,28 +251,29 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="12dp">
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/planta_maguey_morado"/>
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="🪴"
-                            android:textSize="28sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Maguey Morado"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/md_on_surface"
-                            android:gravity="center"/>
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:background="@color/md_surface"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
-            <!-- BOTÓN PÍLDORA MD3 -->
+            <!-- BOTÓN -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnVerCatalogo"
                 android:layout_width="match_parent"
@@ -290,7 +285,7 @@
                 app:cornerRadius="100dp"
                 android:layout_marginBottom="20dp"/>
 
-            <!-- AVISO MD3 -->
+            <!-- AVISO -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -298,13 +293,11 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="@color/md_error_container">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -313,7 +306,6 @@
                         android:textStyle="bold"
                         android:textColor="@color/md_on_error_container"
                         android:layout_marginBottom="6dp"/>
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -321,7 +313,6 @@
                         android:textSize="13sp"
                         android:textColor="@color/md_on_error_container"
                         android:lineSpacingMultiplier="1.5"/>
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

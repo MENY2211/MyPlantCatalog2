@@ -8,7 +8,7 @@
     android:layout_marginEnd="16dp"
     android:layout_marginTop="6dp"
     android:layout_marginBottom="6dp"
-    app:cardCornerRadius="16dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/md_outline_variant"
     app:strokeWidth="1dp"
@@ -21,12 +21,12 @@
         android:padding="16dp"
         android:gravity="center_vertical">
 
-        <!-- Imagen circular MD3 -->
+        <!-- Imagen circular -->
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
             android:layout_marginEnd="16dp"
-            app:cardCornerRadius="36dp"
+            app:cardCornerRadius="38dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/md_outline_variant"
             app:strokeWidth="1dp"
@@ -34,13 +34,13 @@
 
             <ImageView
                 android:id="@+id/imgPlanta"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:scaleType="centerCrop" />
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:scaleType="centerCrop"/>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Contenido -->
+        <!-- Textos -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -51,10 +51,10 @@
                 android:id="@+id/tvNombreComun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 android:textColor="@color/md_on_surface"
-                android:layout_marginBottom="2dp"/>
+                android:layout_marginBottom="3dp"/>
 
             <TextView
                 android:id="@+id/tvNombreCientifico"
@@ -73,21 +73,24 @@
                 android:textColor="@color/md_on_surface_variant"
                 android:layout_marginBottom="10dp"/>
 
-            <!-- Botón píldora MD3 -->
+            <!-- Botón píldora MD3 tonal -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/chipVer"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="34dp"
                 android:text="Ver detalle"
                 android:textSize="12sp"
                 android:textColor="@color/md_on_primary_container"
                 app:backgroundTint="@color/md_primary_container"
                 app:cornerRadius="100dp"
+                app:iconPadding="0dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 style="@style/Widget.Material3.Button.TonalButton"/>
 
         </LinearLayout>
 
-        <!-- Favorito -->
+        <!-- Estrella favorito -->
         <ImageButton
             android:id="@+id/btnFavorito"
             android:layout_width="40dp"
@@ -95,7 +98,8 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/btn_star_big_off"
             android:contentDescription="Favorito"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"
+            android:layout_gravity="top"/>
 
     </LinearLayout>
 

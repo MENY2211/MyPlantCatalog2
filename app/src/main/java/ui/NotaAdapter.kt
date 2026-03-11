@@ -1,35 +1,56 @@
 package com.example.equipo0.ui
 
 import android.view.*
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.card.MaterialCardView
+import com.example.equipo0.R
+import com.example.equipo0.databinding.ItemNotaBinding
+import com.example.equipo0.model.PlantasData
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NotaAdapter(
     private val notas: List<Pair<String, String>>,
-    private val onEliminar: (String) -> Unit
+    private val onEliminar: (String) -> Unit,
+    private val onLeerMas: (String, String) -> Unit
 ) : RecyclerView.Adapter<NotaAdapter.NotaViewHolder>() {
 
-    inner class NotaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvTitulo: TextView = view.findViewById(android.R.id.text1)
-        val tvNota: TextView   = view.findViewById(android.R.id.text2)
-    }
+    inner class NotaViewHolder(val binding: ItemNotaBinding)
+        : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotaViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(android.R.layout.simple_list_item_2, parent, false)
-        return NotaViewHolder(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        NotaViewHolder(ItemNotaBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
         val (titulo, nota) = notas[position]
-        holder.tvTitulo.text = titulo
-        holder.tvTitulo.setTextColor(android.graphics.Color.parseColor("#1B5E20"))
-        holder.tvTitulo.textSize = 16f
-        holder.tvNota.text = nota
-        holder.itemView.setOnLongClickListener {
-            onEliminar(titulo)
-            true
+        with(holder.binding) {
+
+            tvNotaTitulo.text = titulo
+            tvNotaPreview.text = nota
+
+            // Fecha actual como placeholder
+            val fecha = SimpleDateFormat("dd MMM yyyy", Locale("es")).format(Date())
+            tvNotaFecha.text = fecha.uppercase()
+
+            // Imagen: busca si hay planta con ese nombre, si no usa la primera
+            val planta = PlantasData.lista.find {
+                titulo.lowercase().contains(it.nombreComun.lowercase()) ||
+                        it.nombreComun.lowercase().contains(titulo.lowercase())
+            } ?: PlantasData.lista.first()
+            imgNotaPlanta.setImageResource(planta.imageRes)
+
+            // Chip categoría basado en usos
+            val categoria = when {
+                nota.lowercase().contains("digest") || nota.lowercase().contains("estómago") -> "DIGESTIVO"
+                nota.lowercase().contains("piel") || nota.lowercase().contains("herida") -> "PIEL"
+                nota.lowercase().contains("nervio") || nota.lowercase().contains("estrés") -> "RELAJANTE"
+                nota.lowercase().contains("tos") || nota.lowercase().contains("respir") -> "RESPIRATORIO"
+                else -> "GENERAL"
+            }
+            chipCategoria.text = categoria
+
+            tvLeerMas.setOnClickListener { onLeerMas(titulo, nota) }
+            root.setOnLongClickListener { onEliminar(titulo); true }
         }
     }
 
