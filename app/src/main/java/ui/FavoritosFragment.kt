@@ -45,7 +45,7 @@ class FavoritosFragment : Fragment() {
             binding.recyclerFavoritos.visibility = View.VISIBLE
             val adapter = PlantaAdapter(favoritas) { planta ->
                 val bundle = Bundle().apply { putInt("plantaId", planta.id) }
-                findNavController().navigate(R.id.detalleFragment, bundle)
+                findNavController().navigate(R.id.action_favoritos_to_detalle, bundle)
             }
             binding.recyclerFavoritos.layoutManager = LinearLayoutManager(requireContext())
             binding.recyclerFavoritos.adapter = adapter

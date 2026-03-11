@@ -3,18 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/fondo_crema"
-    android:paddingTop="16dp">
+    android:background="@color/md_surface">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mis Favoritos"
-        android:textSize="24sp"
+        android:textSize="26sp"
         android:textStyle="bold"
-        android:textColor="@color/verde_oscuro"
-        android:paddingStart="16dp"
-        android:layout_marginBottom="10dp"/>
+        android:textColor="@color/md_on_surface"
+        android:paddingStart="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="12dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerFavoritos"
@@ -22,19 +22,43 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingBottom="8dp"/>
+        android:paddingBottom="16dp"/>
 
-    <TextView
+    <LinearLayout
         android:id="@+id/tvFavoritosVacio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="⭐ Aún no tienes favoritos.\nPresiona la estrella en cualquier planta para guardarla aquí."
-        android:textColor="#9E9E9E"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
         android:gravity="center"
         android:visibility="gone"
-        android:layout_marginTop="64dp"
-        android:textSize="15sp"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"/>
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐"
+            android:textSize="48sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aún no tienes favoritos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_on_surface"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presiona la estrella en cualquier planta para guardarla aquí."
+            android:textColor="@color/md_on_surface_variant"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.4"/>
+
+    </LinearLayout>
 
 </LinearLayout>

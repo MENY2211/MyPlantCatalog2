@@ -7,27 +7,51 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.equipo0.ui.HomeFragment"
-        android:label="Inicio" />
+        android:label="Inicio">
+        <action
+            android:id="@+id/action_home_to_catalogo"
+            app:destination="@id/catalogoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
     <fragment
         android:id="@+id/explorarFragment"
         android:name="com.example.equipo0.ui.ExplorarFragment"
-        android:label="Explorar" />
+        android:label="Explorar">
+        <action
+            android:id="@+id/action_explorar_to_detalle"
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
     <fragment
         android:id="@+id/favoritosFragment"
         android:name="com.example.equipo0.ui.FavoritosFragment"
-        android:label="Favoritos" />
+        android:label="Favoritos">
+        <action
+            android:id="@+id/action_favoritos_to_detalle"
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
     <fragment
         android:id="@+id/misPlantasFragment"
         android:name="com.example.equipo0.ui.MisPlantasFragment"
-        android:label="Mis Plantas" />
+        android:label="Mis Plantas"/>
 
     <fragment
         android:id="@+id/perfilFragment"
         android:name="com.example.equipo0.ui.PerfilFragment"
-        android:label="Perfil" />
+        android:label="Perfil"/>
 
     <fragment
         android:id="@+id/catalogoFragment"
@@ -35,7 +59,11 @@
         android:label="Catálogo">
         <action
             android:id="@+id/action_catalogo_to_detalle"
-            app:destination="@id/detalleFragment" />
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -44,7 +72,7 @@
         android:label="Detalle">
         <argument
             android:name="plantaId"
-            app:argType="integer" />
+            app:argType="integer"/>
     </fragment>
 
 </navigation>

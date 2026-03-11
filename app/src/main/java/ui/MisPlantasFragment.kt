@@ -46,18 +46,20 @@ class MisPlantasFragment : Fragment() {
         } else {
             binding.tvMisPlantasVacio.visibility = View.GONE
             binding.recyclerMisPlantas.visibility = View.VISIBLE
-            val adapter = NotaAdapter(notas.toList()) { titulo ->
-                confirmarEliminar(titulo)
-            }
+
+            val adapter = NotaAdapter(
+                notas.toList(),
+                onEliminar = { titulo -> confirmarEliminar(titulo) },
+                onLeerMas  = { titulo, texto -> mostrarNotaCompleta(titulo, texto) }
+            )
             binding.recyclerMisPlantas.layoutManager = LinearLayoutManager(requireContext())
             binding.recyclerMisPlantas.adapter = adapter
         }
     }
 
     private fun mostrarDialogoNuevaNota() {
-        val dialogView = layoutInflater.inflate(android.R.layout.two_line_list_item, null)
         val etTitulo = EditText(requireContext()).apply { hint = "Nombre de la planta" }
-        val etNota  = EditText(requireContext()).apply {
+        val etNota   = EditText(requireContext()).apply {
             hint = "Tu nota personal..."
             minLines = 3
         }
@@ -68,7 +70,7 @@ class MisPlantasFragment : Fragment() {
             addView(etNota)
         }
         AlertDialog.Builder(requireContext())
-            .setTitle("Nueva nota")
+            .setTitle("Nueva nota herbolaria")
             .setView(layout)
             .setPositiveButton("Guardar") { _, _ ->
                 val titulo = etTitulo.text.toString().trim()
@@ -81,6 +83,14 @@ class MisPlantasFragment : Fragment() {
                 }
             }
             .setNegativeButton("Cancelar", null)
+            .show()
+    }
+
+    private fun mostrarNotaCompleta(titulo: String, texto: String) {
+        AlertDialog.Builder(requireContext())
+            .setTitle(titulo)
+            .setMessage(texto)
+            .setPositiveButton("Cerrar", null)
             .show()
     }
 
