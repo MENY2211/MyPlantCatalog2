@@ -4,100 +4,114 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_crema">
+    android:background="@color/md_surface">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- HEADER VERDE -->
+        <!-- HEADER MD3 con esquinas redondeadas abajo -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/verde_primario"
-            android:padding="24dp"
-            android:paddingTop="32dp"
-            android:paddingBottom="36dp">
+            android:background="@drawable/bg_header_home"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="36dp"
+            android:paddingBottom="32dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🌿 Herbolaria"
-                android:textSize="34sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="4dp" />
+                android:textColor="@color/md_on_primary"
+                android:layout_marginBottom="4dp"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Plantas medicinales de Tabasco"
-                android:textSize="15sp"
-                android:textColor="#c8e6c9"
-                android:layout_marginBottom="20dp" />
+                android:textSize="14sp"
+                android:textColor="#CCE8CC"
+                android:layout_marginBottom="24dp"/>
 
-            <!-- ESTADÍSTICAS dentro del header -->
+            <!-- Stats row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:orientation="horizontal">
 
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="#33ffffff"
-                    android:padding="12dp"
-                    android:layout_marginEnd="8dp">
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#33FFFFFF">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="4"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/white" />
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Plantas"
-                        android:textSize="12sp"
-                        android:textColor="#c8e6c9" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/md_on_primary"/>
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plantas"
+                            android:textSize="12sp"
+                            android:textColor="#CCE8CC"/>
 
-                <LinearLayout
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="#33ffffff"
-                    android:padding="12dp"
-                    android:layout_marginStart="8dp">
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#33FFFFFF">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="100%"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/white" />
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tabasco"
-                        android:textSize="12sp"
-                        android:textColor="#c8e6c9" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/md_on_primary"/>
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tabasco"
+                            android:textSize="12sp"
+                            android:textColor="#CCE8CC"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
         </LinearLayout>
@@ -109,17 +123,17 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- PLANTAS DESTACADAS -->
+            <!-- Sección: Plantas destacadas -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Plantas destacadas"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="@color/verde_oscuro"
-                android:layout_marginBottom="12dp" />
+                android:textColor="@color/md_primary"
+                android:layout_marginBottom="12dp"/>
 
-            <!-- FILA 1 -->
+            <!-- Grid 2x2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -128,11 +142,14 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="90dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/md_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/md_surface_variant">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -143,25 +160,28 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="🌿"
-                            android:textSize="24sp" />
+                            android:textSize="28sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Hierba Santa"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_oscuro"
-                            android:gravity="center" />
+                            android:textColor="@color/md_on_surface"
+                            android:gravity="center"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="90dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/md_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/md_surface_variant">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -172,21 +192,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="🥬"
-                            android:textSize="24sp" />
+                            android:textSize="28sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Chaya"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_oscuro"
-                            android:gravity="center" />
+                            android:textColor="@color/md_on_surface"
+                            android:gravity="center"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
-            <!-- FILA 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -195,11 +214,14 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="90dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/md_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/md_surface_variant">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -210,25 +232,28 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="🌸"
-                            android:textSize="24sp" />
+                            android:textSize="28sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Albahaca Morada"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_oscuro"
-                            android:gravity="center" />
+                            android:textColor="@color/md_on_surface"
+                            android:gravity="center"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
-                    android:layout_height="90dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/md_outline_variant"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="@color/md_surface_variant">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -239,38 +264,40 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="🪴"
-                            android:textSize="24sp" />
+                            android:textSize="28sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Maguey Morado"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_oscuro"
-                            android:gravity="center" />
+                            android:textColor="@color/md_on_surface"
+                            android:gravity="center"/>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 
-            <!-- BOTÓN VER CATÁLOGO -->
+            <!-- BOTÓN PÍLDORA MD3 -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_ver_catalogo"
+                android:id="@+id/btnVerCatalogo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:text="Ver catálogo completo"
                 android:textSize="15sp"
-                android:padding="14dp"
-                app:cornerRadius="12dp"
-                android:backgroundTint="@color/verde_primario"
-                android:layout_marginBottom="20dp" />
+                android:textColor="@color/md_on_primary"
+                app:backgroundTint="@color/md_primary"
+                app:cornerRadius="100dp"
+                android:layout_marginBottom="20dp"/>
 
-            <!-- AVISO -->
+            <!-- AVISO MD3 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="#FFF3E0">
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/md_error_container">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -284,16 +311,16 @@
                         android:text="⚠️ Aviso importante"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="#E65100"
-                        android:layout_marginBottom="6dp" />
+                        android:textColor="@color/md_on_error_container"
+                        android:layout_marginBottom="6dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Esta app es informativa. Consulta siempre a un médico antes de usar plantas medicinales."
                         android:textSize="13sp"
-                        android:textColor="#5D4037"
-                        android:lineSpacingMultiplier="1.5" />
+                        android:textColor="@color/md_on_error_container"
+                        android:lineSpacingMultiplier="1.5"/>
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

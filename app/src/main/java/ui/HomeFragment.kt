@@ -1,13 +1,12 @@
 package com.example.equipo0.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.equipo0.R
 import com.example.equipo0.databinding.FragmentHomeBinding
+import com.example.equipo0.util.setBounceTouchEffect
 
 class HomeFragment : Fragment() {
 
@@ -25,8 +24,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Efecto rebote en el botón principal
+        binding.btnVerCatalogo.setBounceTouchEffect()
+
         binding.btnVerCatalogo.setOnClickListener {
-            findNavController().navigate(R.id.catalogoFragment)
+            findNavController().navigate(R.id.action_home_to_catalogo)
         }
     }
 
