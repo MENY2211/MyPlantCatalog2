@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyPlantCatalog2</string>
+    <string name="app_name">Herbolaria Tabasco</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_catalogo">Catálogo</string>
+    <string name="hierba_santa">Hierba Santa</string>
+    <string name="chaya">Chaya</string>
+    <string name="albahaca">Albahaca Morada</string>
+    <string name="maguey">Maguey Morado</string>
 </resources>

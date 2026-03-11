@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "mx.tabasco.herbolaria"
+    namespace = "com.example.equipo0"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "mx.tabasco.herbolaria"
+        applicationId = "com.example.equipo0"
         minSdk     = 26
         targetSdk  = 35
         versionCode = 1
@@ -34,4 +34,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.3")
 }
