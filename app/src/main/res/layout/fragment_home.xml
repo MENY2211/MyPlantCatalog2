@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo">
+    android:background="@color/fondo_crema">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/verde_primary"
+            android:background="@color/verde_primario"
             android:padding="24dp"
             android:paddingTop="32dp"
             android:paddingBottom="36dp">
@@ -27,7 +27,7 @@
                 android:text="🌿 Herbolaria"
                 android:textSize="34sp"
                 android:textStyle="bold"
-                android:textColor="@color/blanco"
+                android:textColor="@android:color/white"
                 android:layout_marginBottom="4dp" />
 
             <TextView
@@ -61,7 +61,7 @@
                         android:text="4"
                         android:textSize="26sp"
                         android:textStyle="bold"
-                        android:textColor="@color/blanco" />
+                        android:textColor="@android:color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                         android:text="100%"
                         android:textSize="26sp"
                         android:textStyle="bold"
-                        android:textColor="@color/blanco" />
+                        android:textColor="@android:color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -116,7 +116,7 @@
                 android:text="Plantas destacadas"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="@color/verde_dark"
+                android:textColor="@color/verde_oscuro"
                 android:layout_marginBottom="12dp" />
 
             <!-- FILA 1 -->
@@ -132,7 +132,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/verde_light">
+                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -150,7 +150,7 @@
                             android:text="Hierba Santa"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_dark"
+                            android:textColor="@color/verde_oscuro"
                             android:gravity="center" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -161,7 +161,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/verde_light">
+                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -179,7 +179,7 @@
                             android:text="Chaya"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_dark"
+                            android:textColor="@color/verde_oscuro"
                             android:gravity="center" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -199,7 +199,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/verde_light">
+                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -217,7 +217,7 @@
                             android:text="Albahaca Morada"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_dark"
+                            android:textColor="@color/verde_oscuro"
                             android:gravity="center" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -228,7 +228,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="6dp"
                     app:cardCornerRadius="14dp"
-                    app:cardBackgroundColor="@color/verde_light">
+                    app:cardBackgroundColor="@color/fondo_crema_oscuro">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -246,7 +246,7 @@
                             android:text="Maguey Morado"
                             android:textSize="12sp"
                             android:textStyle="bold"
-                            android:textColor="@color/verde_dark"
+                            android:textColor="@color/verde_oscuro"
                             android:gravity="center" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -262,7 +262,7 @@
                 android:textSize="15sp"
                 android:padding="14dp"
                 app:cornerRadius="12dp"
-                android:backgroundTint="@color/verde_primary"
+                android:backgroundTint="@color/verde_primario"
                 android:layout_marginBottom="20dp" />
 
             <!-- AVISO -->
