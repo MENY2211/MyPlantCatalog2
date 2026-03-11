@@ -12,6 +12,19 @@
     <fragment
         android:id="@+id/catalogoFragment"
         android:name="com.example.equipo0.ui.CatalogoFragment"
-        android:label="Catálogo" />
+        android:label="Catálogo">
+        <action
+            android:id="@+id/action_catalogo_to_detalle"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.equipo0.ui.DetalleFragment"
+        android:label="Detalle">
+        <argument
+            android:name="plantaId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

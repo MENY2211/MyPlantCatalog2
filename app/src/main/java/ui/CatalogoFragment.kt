@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.equipo0.R
 import com.example.equipo0.databinding.FragmentCatalogoBinding
 import com.example.equipo0.model.PlantasData
 
@@ -27,7 +28,8 @@ class CatalogoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = PlantaAdapter(PlantasData.lista) { planta ->
-            Toast.makeText(requireContext(), planta.nombreComun, Toast.LENGTH_SHORT).show()
+            val bundle = Bundle().apply { putInt("plantaId", planta.id) }
+            findNavController().navigate(R.id.action_catalogo_to_detalle, bundle)
         }
 
         binding.recyclerPlantas.layoutManager = LinearLayoutManager(requireContext())
